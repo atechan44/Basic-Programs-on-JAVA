@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class fibonacci {
     public static void main(String[] args){
        System.out.println("Öğrenmek istediğiniz fibonacci sayısını giriniz:");
@@ -7,13 +8,17 @@ public class fibonacci {
        long ikinci = 1;
        long yeni;
        int girilenSayi=giris.nextInt();
-       System.out.println("1.sayı: 1");
+      
+    if(girilenSayi>1){
     for(int i=2;i<=girilenSayi;i++){
         yeni=birinci+ikinci;
         System.out.println(i+".sayı: "+yeni);
         birinci=ikinci;
         ikinci=yeni;
     }
+}else{
+    System.out.println("1'den küçük sayı giremezsin");
+}
      giris.close();
    
     }
